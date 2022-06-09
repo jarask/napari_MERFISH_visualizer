@@ -192,7 +192,7 @@ class NapariMERFISH:
 
     def _load_spots(self, labeled_data_starfish):
         # Read in the spots data
-        spots_data = labeled_data_starfish
+        spots_data = labeled_data_starfish.copy()
         # Assign IDs to each spot
         spots_data["id"] = range(len(spots_data))
         # Increment the cell_id for the purpose of relating the spots correctly to a cell
